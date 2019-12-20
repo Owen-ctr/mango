@@ -1,0 +1,51 @@
+### set log levels ###    
+#log4j.rootLogger = INFO,DEBUG, console, infoFile, errorFile ,debugfile,mail 
+#LocationInfo=true    
+#
+#log4j.appender.console = org.apache.log4j.ConsoleAppender  
+#log4j.appender.console.Target = System.out  
+#log4j.appender.console.layout = org.apache.log4j.PatternLayout 
+#
+#log4j.appender.console.layout.ConversionPattern =[%d{yyyy-MM-dd HH:mm:ss,SSS}]-[%p]:%m   %x %n 
+#
+#log4j.appender.infoFile = org.apache.log4j.DailyRollingFileAppender  
+#log4j.appender.infoFile.Threshold = INFO  
+#log4j.appender.infoFile.File = C:/logs/log
+#log4j.appender.infoFile.DatePattern = '.'yyyy-MM-dd'.log'  
+#log4j.appender.infoFile.Append=true
+#log4j.appender.infoFile.layout = org.apache.log4j.PatternLayout  
+#log4j.appender.infoFile.layout.ConversionPattern =[%d{yyyy-MM-dd HH:mm:ss,SSS}]-[%p]:%m  %x %n 
+#
+#log4j.appender.errorFile = org.apache.log4j.DailyRollingFileAppender  
+#log4j.appender.errorFile.Threshold = ERROR  
+#log4j.appender.errorFile.File = C:/logs/error  
+#log4j.appender.errorFile.DatePattern = '.'yyyy-MM-dd'.log'  
+#log4j.appender.errorFile.Append=true  
+#log4j.appender.errorFile.layout = org.apache.log4j.PatternLayout  
+#log4j.appender.errorFile.layout.ConversionPattern =[%d{yyyy-MM-dd HH:mm:ss,SSS}]-[%p]:%m  %x %n
+#
+#log4j.appender.debugfile = org.apache.log4j.DailyRollingFileAppender  
+#log4j.appender.debugfile.Threshold = DEBUG  
+#log4j.appender.debugfile.File = C:/logs/debug  
+#log4j.appender.debugfile.DatePattern = '.'yyyy-MM-dd'.log'  
+#log4j.appender.debugfile.Append=true  
+#log4j.appender.debugfile.layout = org.apache.log4j.PatternLayout  
+#log4j.appender.debugfile.layout.ConversionPattern =[%d{yyyy-MM-dd HH:mm:ss,SSS}]-[%p]:%m  %x %n
+
+#\u8BBE\u7F6E\u65E5\u5FD7\u7684\u7EA7\u522B ,\u591A\u4E2A\u4EE5,\u5206\u5F00(\u6CA1\u6709\u7ED9\u51FA\u7684\uFF0C\u5219\u4E0D\u4F1A\u88AB\u8F93\u51FA)
+log4j.rootLogger=info,error,R
+
+#DailyRollingFileAppender\u6BCF\u5929\u4EA7\u751F\u4E00\u4E2A\u65E5\u5FD7\u6587\u4EF6
+log4j.appender.R=org.apache.log4j.DailyRollingFileAppender
+
+#\u8BBE\u7F6E\u65E5\u5FD7\u6587\u4EF6\u4FDD\u5B58\u8DEF\u5F84
+log4j.appender.R.File=logs/backup.log
+
+#\u65E5\u5FD7\u8F93\u51FA\u683C\u5F0F
+log4j.appender.R.layout.ConversionPattern=%-d{yyyy-MM-dd HH\:mm\:ss} [%c]-[%p] %m%n
+ 
+#\u8BBE\u7F6E\u65E5\u5FD7\u6587\u4EF6\u540E\u7F00\u540D,\u51B3\u5B9A\u7740\u591A\u957F\u65F6\u95F4\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u6587\u4EF6\uFF01yyyyMMdd\u6BCF\u5929\u4E00\u4E2A\uFF0CyyyyMMddHH\u7B2C\u5C0F\u65F6\u4E00\u4E2A,...
+log4j.appender.R.DatePattern='.'yyyy-MM-dd
+
+#\u65E5\u5FD7\u5E03\u5C40\u683C\u5F0F
+log4j.appender.R.layout=org.apache.log4j.PatternLayout

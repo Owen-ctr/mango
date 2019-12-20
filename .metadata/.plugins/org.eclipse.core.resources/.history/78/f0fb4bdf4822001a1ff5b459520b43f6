@@ -1,0 +1,14 @@
+package com.louis.mango.admin;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+
+@SpringBootApplication(scanBasePackages = {"com.louis.mango.admin"}, exclude={DataSourceAutoConfiguration.class})
+public class MangoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MangoAdminApplication.class, args);
+	}
+
+}
